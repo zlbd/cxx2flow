@@ -62,6 +62,9 @@ If specified, output flow chart will have curly connection line."
     #[clap(short, long, help("Use tikz backend."))]
     pub tikz: bool,
 
+    #[clap(short, long, help("Use mydrawio backend."))]
+    pub mydrawio: bool,
+
     #[clap(short, long, help("Use d2 backend."))]
     pub d2: bool,
 

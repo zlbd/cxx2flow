@@ -4,14 +4,17 @@ use crate::{error::Result, graph::Graph};
 
 use self::d2::D2;
 use self::dot::Dot;
+use self::mydrawio::DrawIO;
 use self::tikz::Tikz;
 
 pub mod d2;
 pub mod dot;
+pub mod mydrawio;
 pub mod tikz;
 #[enum_dispatch]
 pub enum GraphDisplayBackend {
     Dot,
+    DrawIO,
     Tikz,
     D2,
 }

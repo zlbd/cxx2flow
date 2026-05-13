@@ -1,6 +1,6 @@
 use cxx2flow::{
     cli::Args,
-    display::{d2::D2, dot::Dot, tikz::Tikz},
+    display::{d2::D2, dot::Dot, mydrawio::DrawIO, tikz::Tikz},
     dump,
     error::Error,
 };
@@ -67,6 +67,8 @@ fn main() -> miette::Result<()> {
         Tikz::new().into()
     } else if args.d2 {
         D2::new().into()
+    } else if args.mydrawio {
+        DrawIO::new().into()
     } else {
         Dot::new(args.curly).into()
     };
